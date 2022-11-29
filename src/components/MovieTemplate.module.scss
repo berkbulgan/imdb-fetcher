@@ -1,0 +1,90 @@
+.MovieTemplate {
+	width: 80%;
+	.Header {
+		padding: 0px 30px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.Title {
+            h2{
+                margin: 0px;
+                font-size: 3rem;
+            }
+			.SubInfo {
+				display: flex;
+				flex-direction: row;
+                p{
+                    margin: 5px 0px;
+                }
+				& > *:not(:last-child) {
+					margin-right: 10px;
+				}
+			}
+		}
+		.Ratings {
+			display: flex;
+			flex-direction: row;
+			& > *:not(:last-child) {
+				margin-right: 20px;
+			}
+			& > * {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				img {
+					margin-top: 16px;
+					width: 30px;
+					height: 30px;
+				}
+			}
+		}
+	}
+	.Hero {
+		display: flex;
+		color: #2d4059;
+		padding: 15px;
+		background-color: #ffd460;
+		border-radius: 20px;
+		.Metadata {
+			width: 300px;
+			img {
+				border-radius: 15px;
+			}
+			.Genres {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-evenly;
+                height: 70px;
+				& > * {
+					padding: 10px;
+					background-color: #2d4059;
+					color: #ffd460;
+					border-radius: 5px;
+				}
+				& > *:not(:last-child) {
+					margin-right: 10px;
+				}
+			}
+		}
+		.Left {
+			padding: 0px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+			.Description {
+				.Crew {
+					margin-bottom: 50px;
+				}
+				.Plot {
+					h4 {
+						margin-bottom: 5px;
+					}
+				}
+			}
+            .Actors{
+                margin-bottom: 70px;
+            }
+		}
+	}
+}

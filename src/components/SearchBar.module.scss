@@ -1,0 +1,28 @@
+.SearchBar{
+    display: flex;
+    margin: 50px;
+    input{
+        width: 500px;
+        height: 30px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 0 10px;
+        &::placeholder{
+            color: #2D4059;
+            opacity: 100%;
+        }
+    }
+    button{
+        position: relative;
+        top: 2.5px;
+        right: 30px;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #FFD460;
+        color: #2D4059;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
