@@ -15,33 +15,32 @@ const MovieTemplate = (props) => {
     const ratings = props.movie.Ratings.map((rating) => {
         if (rating.Source === "Internet Movie Database") {
             return (
-                <div className={classes.Rating}>
-                    <img src={imdb} alt = "imdb" className={classes.RatingImage}/>
+                <div className={classes.Rating} key="imdb">
+                    <img src={imdb} alt="imdb" className={classes.RatingImage} />
                     <p className={classes.RatingText}>{rating.Value}</p>
                 </div>
             );
         } else if (rating.Source === "Rotten Tomatoes") {
             return (
-                <div className={classes.Rating}>
-                    <img src={rotten} alt
-                    = "rotten" className={classes.RatingImage}/>
+                <div className={classes.Rating} key="rotten">
+                    <img src={rotten} alt="rotten" className={classes.RatingImage} />
                     <p className={classes.RatingText}>{rating.Value}</p>
                 </div>
             );
         } else if (rating.Source === "Metacritic") {
             return (
-                <div className={classes.Rating}>
-                    <img src={metacritic
-                    } alt = "metacritic" className={classes.RatingImage}/>
+                <div className={classes.Rating} key="metacritic">
+                    <img src={metacritic} alt="metacritic" className={classes.RatingImage} />
                     <p className={classes.RatingText}>{rating.Value}</p>
                 </div>
             );
         }
+        return <></>;
     });
 
     const genres = props.movie.Genre.split(", ").map((genre) => {
         return (
-                <p className={classes.GenreText}>{genre}</p>
+            <p className={classes.GenreText} key={genre}>{genre}</p>
         );
     });
     return (
@@ -73,12 +72,12 @@ const MovieTemplate = (props) => {
                             <h3>Writer: {props.movie.Writer}</h3>
                         </div>
                         <div className={classes.Plot}>
-                            <h4>Plot: <br/></h4>
+                            <h4>Plot: <br /></h4>
                             <p>{props.movie.Plot}</p>
                         </div>
                     </div>
                     <div className={classes.Actors}>
-                        <h4>Actors: <br/></h4>
+                        <h4>Actors: <br /></h4>
                         <p>{props.movie.Actors}</p>
                     </div>
                 </div>
